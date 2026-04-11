@@ -1,16 +1,39 @@
-# React + Vite
+# Hareem Studio — portfolio (Vite + React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Local run
 
-Currently, two official plugins are available:
+```bash
+npm install
+npm run dev
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Copy `.env.example` to `.env` and add your EmailJS values (see below).
 
-## React Compiler
+## Deploy on Vercel
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Push this repo to GitHub (create an empty repo on GitHub, then):
 
-## Expanding the ESLint configuration
+   ```bash
+   git remote add origin https://github.com/YOUR_USER/YOUR_REPO.git
+   git branch -M main
+   git push -u origin main
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. Open [vercel.com](https://vercel.com) → **Add New** → **Project** → import that GitHub repo. Vite is auto-detected via `vercel.json`.
+
+3. In the project → **Settings** → **Environment Variables**, add **all** of these (same names as in `.env.example`), for **Production** (and Preview if you want the form there too):
+
+   | Name | Where to get it |
+   |------|-----------------|
+   | `VITE_EMAILJS_PUBLIC_KEY` | EmailJS → Account → API keys → Public Key |
+   | `VITE_EMAILJS_SERVICE_ID` | EmailJS → Email Services → your service → Service ID |
+   | `VITE_EMAILJS_TEMPLATE_ID` | EmailJS → Email Templates → your template → Template ID |
+   | `VITE_RECEIVER_EMAIL` | Your inbox email (must match how you set the template) |
+
+4. **Redeploy** after saving env vars (Deployments → … on latest → Redeploy).
+
+CLI alternative (after `npx vercel login`): `npm run deploy`
+
+## EmailJS template fields
+
+The contact form sends: `sender_email`, `message`, `to_email`, `reply_to`. Your EmailJS template should use these so mail delivers correctly.
