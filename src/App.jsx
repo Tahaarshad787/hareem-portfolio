@@ -3,6 +3,40 @@ import emailjs from '@emailjs/browser'
 import { env } from './env.js'
 import './App.css'
 
+
+import chineseCover from '../src/assets/gallery/chinese-tapestry-bedding/cover.png'
+import bedding1 from '../src/assets/gallery/chinese-tapestry-bedding/bedding1.png'
+import bedding2 from '../src/assets/gallery/chinese-tapestry-bedding/bedding2.png'
+import bedding3 from '../src/assets/gallery/chinese-tapestry-bedding/bedding3.png'
+import bedding4 from '../src/assets/gallery/chinese-tapestry-bedding/bedding4.png'
+import logo from '../src/assets/logo.png'
+import booti from '../src/assets/gallery/booti-pattern/cover.png'
+import booti1 from '../src/assets/gallery/booti-pattern/booti1.png'
+import booti2 from '../src/assets/gallery/booti-pattern/booti2.png'
+import booti3 from '../src/assets/gallery/booti-pattern/booti3.png'
+import booti4 from '../src/assets/gallery/booti-pattern/booti4.png'
+import seaShells from '../src/assets/gallery/oceanic/cover.png'
+import seaShells1 from '../src/assets/gallery/oceanic/seaShells1.png'
+import seaShells2 from '../src/assets/gallery/oceanic/seaShells2.png'
+import seaShells3 from '../src/assets/gallery/oceanic/seaShells3.png'
+import seaShells4 from '../src/assets/gallery/oceanic/seaShells4.png'
+import shadowForms from '../src/assets/gallery/luminous/cover.png'
+import shadowForms1 from '../src/assets/gallery/luminous/shadowForms1.png'
+import shadowForms2 from '../src/assets/gallery/luminous/shadowForms2.png'
+import shadowForms3 from '../src/assets/gallery/luminous/shadowForms3.png'
+import shadowForms4 from '../src/assets/gallery/luminous/shadowForms4.png'
+import radiant from '../src/assets/gallery/tie-dye/cover.png'
+import radiant1 from '../src/assets/gallery/tie-dye/radiant1.png'
+import radiant2 from '../src/assets/gallery/tie-dye/radiant2.png'
+import radiant3 from '../src/assets/gallery/tie-dye/radiant3.png'
+import radiant4 from '../src/assets/gallery/tie-dye/radiant4.png'
+import fluidity from '../src/assets/gallery/marbling/cover.png'
+import fluidity1 from '../src/assets/gallery/marbling/fluidity1.png'
+import fluidity2 from '../src/assets/gallery/marbling/fluidity2.png'
+import fluidity3 from '../src/assets/gallery/marbling/fluidity3.png'
+import fluidity4 from '../src/assets/gallery/marbling/fluidity4.png'
+import cvPdfUrl from './assets/Hameez Naz.pdf?url'
+
 /* ── Textile SVG decoration components ─────────────── */
 
 // Hexagon / ikat weave pattern
@@ -150,10 +184,38 @@ const IconTextileTechniques = () => (
   </svg>
 )
 
+/** Card thumbnail: photo from `public/gallery/...`; gradient + emoji if file missing. */
+function GalleryThumb({ project }) {
+  const [broken, setBroken] = useState(false)
+  const gradient = `linear-gradient(135deg, ${project.colors[0]}, ${project.colors[1]})`
+  const showEmoji = !project.cover || broken
+  return (
+    <div className="gallery-thumb">
+      <div className="gallery-thumb-bg" style={{ background: gradient }} aria-hidden />
+      {!showEmoji && (
+        <img
+          src={project.cover}
+          alt=""
+          className="gallery-thumb-img"
+          loading="lazy"
+          onError={() => setBroken(true)}
+        />
+      )}
+      {showEmoji && (
+        <div className="gallery-emoji" aria-hidden>{project.emoji}</div>
+      )}
+      <div className="gallery-overlay">
+        <span>Click to view all images →</span>
+      </div>
+    </div>
+  )
+}
+
 function App() {
   const [formData, setFormData] = useState({ senderEmail: '', message: '' })
   const [submitState, setSubmitState] = useState({ loading: false, message: '', isError: false })
   const [lightbox, setLightbox] = useState({ open: false, projectIdx: 0, thumbIdx: 0 })
+  const [lbMainImgFailed, setLbMainImgFailed] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const revealRefs = useRef([])
@@ -167,58 +229,70 @@ function App() {
 
   const projects = [
     {
-      title: 'Floral Block Print Bedding',
-      type: 'Home Textile',
+      title: 'Bedding Set Design Chinese Tapestry Inspired',
+      type: 'Print Design',
       emoji: '🌸',
       colors: ['#fce7f3', '#f3e8ff', '#fef3c7', '#e8f5e9'],
-      desc: 'Traditional floral motifs hand-carved and block-printed on cotton fabric for a luxury bedding set. Inspired by Sindhi embroidery patterns with a modern color palette.',
-      tools: ['Block Printing', 'Pattern Design', 'Color Mixing', 'Cotton Fabric'],
+      desc: 'This bedding set is inspired by the rich visual language of traditional Chinese tapestry, reflecting elegance, symbolism, and rhythmic pattern composition. The set includes a duvet cover, flat bedsheet, fitted bedsheet, pillows, and back cushions, designed as a cohesive collection. The design features stylized floral motifs and flowing vine elements, influenced by traditional East Asian decorative patterns. These motifs are arranged with a sense of balance and movement, echoing the ornamental qualities often found in Chinese textile art. The use of organic curves and delicate detailing enhances the overall sophistication of the design. A full drop repeat pattern is applied on the main bedsheet, ensuring seamless continuity and demonstrating an understanding of professional textile repeat systems. The placement of motifs across different components of the set is carefully considered to maintain visual harmony. The color palette draws inspiration from classic Chinese aesthetics, incorporating rich and warm tones that create a bold yet graceful appearance. The entire design is executed using poster paints, showcasing control over brushwork, color blending, and surface technique. This project highlights the integration of cultural inspiration with contemporary textile application, reflecting strong skills in motif development, repeat design, and product visualization.',
+      tools: ['Chinese tapestry inspired', 'Rhythm & balance', 'Poster paint', 'Motif development'],
       thumbEmojis: ['🌸', '🌺', '🌼', '🌷'],
+      cover: chineseCover,
+      images: [bedding1, bedding2, bedding3, bedding4],
     },
     {
-      title: 'Shibori Indigo Table Linen',
-      type: 'Surface Design',
+      title: 'Table Linen Design Indian Booti Inspired',
+      type: 'Booti Pattern',
       emoji: '💙',
       colors: ['#e0f2fe', '#dbeafe', '#e0e7ff', '#ede9fe'],
-      desc: 'Japanese Shibori tie-dye technique applied to linen table cloth and napkins. Each piece is unique with organic indigo patterns through folding and binding.',
-      tools: ['Shibori Technique', 'Tie & Dye', 'Indigo Dyeing', 'Linen'],
+      desc: 'This table linen set is inspired by the traditional Indian Booti motif, known for its delicate, repetitive floral elements and timeless appeal in textile design. The collection includes a tablecloth, table runner, placemat, napkin, and coaster, all designed to maintain a cohesive and balanced aesthetic.The design prominently features stylized booti motifs, combined with complementary floral elements, arranged in a structured yet visually pleasing composition. The motifs reflect traditional Indian textile ornamentation, characterized by symmetry, repetition, and fine detailing.A full drop repeat pattern is developed for the tablecloth, ensuring seamless continuity across the surface. The arrangement of motifs is carefully adapted for each product within the set—larger layouts for the tablecloth and runner, and more minimal, placement-based designs for napkins and coasters—creating both variety and harmony within the collection.The color palette is soft yet elegant, enhancing the traditional essence while giving the design a contemporary touch. The entire set is executed using poster paints, demonstrating precision in brushwork, clean edges, and effective color application.This project reflects a strong understanding of traditional motif adaptation, repeat pattern development, and product-based design, translating heritage inspiration into functional textile applications.',
+      tools: ['Booti pattern', 'Soft palette', 'Traditional aesthetic', 'Contemporary touch'],
       thumbEmojis: ['💙', '🌊', '✨', '🦋'],
+      cover: booti,
+      images: [booti1, booti2, booti3, booti4],
     },
     {
-      title: 'Geometric Stencil Cushion Collection',
-      type: 'Home Decor',
+      title: 'Sea Shells & Corals (Cross Stitch Integration)',
+      type: 'Oceanic',
       emoji: '🔷',
       colors: ['#fef3c7', '#ffedd5', '#fce7f3', '#f0fdf4'],
-      desc: 'Modern geometric patterns created using hand-cut stencils with fabric paint. Bold angular motifs in earthy terracotta and sage tones.',
-      tools: ['Stencil Printing', 'Geometric Design', 'Fabric Paint', 'Cotton Canvas'],
+      desc: 'This textile design is inspired by the beauty of underwater marine life, particularly sea shells and coral formations. The theme explores the organic shapes, textures, and calm rhythm of the ocean, translated into a decorative surface pattern.The composition features a variety of stylized shells, corals, and sea plants arranged over a deep ocean-blue background. Soft pastel tones such as blush pink, muted green, off-white, and accents of orange are used to create contrast while maintaining a soothing, aquatic color palette.The design is developed using a half drop repeat, where motifs are staggered vertically to create a more dynamic and flowing arrangement. This repeat style enhances visual movement, mimicking the natural drift and balance found in underwater environments.A cross stitch technique is incorporated as a central element, adding texture and a handcrafted feel to the design. The stitched section introduces a pixel-like structure that contrasts with the smooth printed motifs, creating an interesting fusion of traditional embroidery and surface design.Overall, the design aims to capture the serenity and richness of marine life while experimenting with repeat patterns and mixed textile techniques.',
+      tools: ['Ocean rhythm', 'Cross stitch', 'Handcrafted feel', 'Ocean palette'],
       thumbEmojis: ['🔷', '⬡', '◈', '▲'],
+      cover: seaShells,
+      images: [seaShells1, seaShells2, seaShells3, seaShells4],
     },
     {
-      title: 'Bandhani Dupatta in Rose Tones',
-      type: 'Traditional Textile',
+      title: 'Shadow Forms with Stripes',
+      type: 'Luminous',
       emoji: '🌹',
       colors: ['#fce7f3', '#fbcfe8', '#f9a8d4', '#fdf2f8'],
-      desc: 'Hand-tied Bandhani technique creating intricate dot patterns on chiffon dupatta. Celebrates Pakistani traditional craft with a contemporary rose and gold palette.',
-      tools: ['Bandhani', 'Tie & Dye', 'Chiffon', 'Traditional Craft'],
+      desc: 'This textile design explores the theme of shadow, focusing on the interplay between organic forms and structured backgrounds. The composition features stylized botanical silhouettes that resemble shadow-like shapes, creating a sense of depth and layering.The background is developed using horizontal stripes in varying tones of blue and white, representing rhythm and continuity. These stripes contrast with the soft, flowing plant motifs, enhancing the visual impact of the “shadow” effect. The muted color palette—featuring dusty pinks, sage green, and deep teal—adds a calm yet sophisticated feel to the design.The pattern is arranged in a half drop repeat, where motifs are staggered vertically. This arrangement breaks monotony and introduces movement, allowing the design to appear more natural and dynamic across the surface.Overall, the design combines the concept of shadow with linear elements, creating a balanced composition that merges softness with structure. The use of contrast between stripes and organic shapes highlights depth, rhythm, and visual harmony.',
+      tools: ['Layered composition', 'Muted palette', 'Color harmony', 'Surface layering'],
       thumbEmojis: ['🌹', '✿', '❀', '🪷'],
+      cover: shadowForms,
+      images: [shadowForms1, shadowForms2, shadowForms3, shadowForms4],
     },
     {
-      title: 'Cross Stitch Garden Wall Art',
-      type: 'Embroidery',
+      title: ' Tie-Dye Resist Patterns – Square Fold & Sunburst Techniques',
+      type: ' Radiant',
       emoji: '🌿',
       colors: ['#f0fdf4', '#dcfce7', '#d1fae5', '#ecfdf5'],
-      desc: 'Detailed cross stitch embroidery featuring a botanical garden scene with birds and flowers. Hand-stitched on Aida cloth using premium DMC threads.',
-      tools: ['Cross Stitch', 'Embroidery', 'Botanical Design', 'DMC Threads'],
+      desc: 'This textile exploration focuses on traditional tie-dye resist techniques, highlighting the controlled manipulation of fabric to create structured and organic patterns.The first cushion is developed using the square fold technique, where the fabric is systematically folded and bound to produce a grid-like pattern. The resulting design features intersecting linear formations with soft, diffused edges, demonstrating precision combined with the fluidity of dye absorption.The second cushion utilizes the sunburst technique, achieved through point binding. This method creates radiating circular motifs that resemble bursts of light, adding a sense of movement and rhythm to the composition.A monochromatic indigo color palette is employed across both pieces, emphasizing tonal variation and enhancing the visual depth of the resist patterns. The contrast between the geometric order of the square fold and the organic dynamism of the sunburst creates a balanced and engaging textile study.Overall, this work reflects an exploration of traditional dyeing methods, showcasing the interplay between control and unpredictability while producing visually distinct yet harmonious surface designs.',
+      tools: ['Monochromatic', 'Textile experiment', 'Dyeing process', 'Cushion design'],
       thumbEmojis: ['🌿', '🦜', '🌻', '🍃'],
+      cover: radiant,
+      images: [radiant1, radiant2, radiant3, radiant4],
     },
     {
-      title: 'Ralli Patchwork Throw Blanket',
-      type: 'Applique Work',
+      title: 'The Art of Marbling',
+      type: 'Fluidity',
       emoji: '🧵',
       colors: ['#fef3c7', '#fce7f3', '#e0f2fe', '#f0fdf4'],
-      desc: 'Traditional Sindhi Ralli applique technique creating a vibrant patchwork throw. Hand-stitched geometric patterns in bright festive colors representing cultural heritage.',
-      tools: ['Ralli Work', 'Applique', 'Patchwork', 'Hand Stitching'],
+      desc: 'This assignment explores the artistic technique of marbling, where oil paint and water interact to create flowing, organic patterns. Because oil and water naturally repel each other, the paint floats and spreads unpredictably across the surface, forming unique swirls, veins, and textures.In the image, six small compositions are mounted on a warm-toned background, each showcasing a different color combination and pattern. Some pieces emphasize bold contrast—like black and white with hints of orange—while others use softer palettes such as pastel blues, pinks, and greens. The designs range from tightly swirled, high-energy movement to more subtle, airy blends with scattered droplets.',
+      tools: ['Oil paint', 'Water interaction', 'Fluid art', 'Floating paint'],
       thumbEmojis: ['🧵', '✂️', '🎨', '✨'],
+      cover: fluidity,
+      images: [fluidity1, fluidity2, fluidity3, fluidity4],
     },
   ]
 
@@ -261,6 +335,10 @@ function App() {
     return () => obs.disconnect()
   }, [])
 
+  useEffect(() => {
+    if (lightbox.open) setLbMainImgFailed(false)
+  }, [lightbox.open, lightbox.projectIdx, lightbox.thumbIdx])
+
   const addReveal = (el) => { if (el && !revealRefs.current.includes(el)) revealRefs.current.push(el) }
 
   const handleChange = (e) => {
@@ -271,7 +349,11 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     if (!emailConfig.serviceId || !emailConfig.templateId || !emailConfig.publicKey) {
-      setSubmitState({ loading: false, isError: true, message: 'Email service configure nahi hai. .env me EmailJS keys add karein.' })
+      setSubmitState({
+        loading: false,
+        isError: true,
+        message: 'Email service is not configured. Add your EmailJS keys in the .env file.',
+      })
       return
     }
     setSubmitState({ loading: true, message: '', isError: false })
@@ -282,10 +364,10 @@ function App() {
         { sender_email: formData.senderEmail, message: formData.message, to_email: emailConfig.toEmail, reply_to: formData.senderEmail },
         { publicKey: emailConfig.publicKey }
       )
-      setSubmitState({ loading: false, isError: false, message: 'Message send ho gaya! ✓' })
+      setSubmitState({ loading: false, isError: false, message: 'Message sent successfully! ✓' })
       setFormData({ senderEmail: '', message: '' })
     } catch {
-      setSubmitState({ loading: false, isError: true, message: 'Send nahi ho saka. Dobara try karein.' })
+      setSubmitState({ loading: false, isError: true, message: 'Could not send your message. Please try again.' })
     }
   }
 
@@ -295,6 +377,8 @@ function App() {
 
   const closeMenu = () => setMenuOpen(false)
   const activeProject = projects[lightbox.projectIdx]
+  const lbSlides = activeProject.images?.length ? activeProject.images : null
+  const hasLbImages = Boolean(lbSlides?.length)
   const navItems = ['Home', 'About', 'Skills', 'Experience', 'Gallery', 'Contact']
 
   return (
@@ -302,7 +386,9 @@ function App() {
 
       {/* ── NAV ─────────────────────────────────────────── */}
       <nav className={`nav ${scrolled ? 'nav-scrolled' : ''}`}>
-        <div className="nav-brand">Hareem Studio</div>
+        <div className="nav-brand">
+          <img src={logo} alt="Hareem Naz" style={{ maxWidth: '170px' }} />
+        </div>
 
         {/* Desktop centered links */}
         <div className="nav-links">
@@ -356,7 +442,9 @@ function App() {
           <div className="hero-actions">
             <a href="#contact" className="btn btn-primary">Get in Touch ✦</a>
             <a href="#gallery" className="btn btn-outline">View Gallery →</a>
-            <a href="/cv.pdf" className="btn btn-ghost" target="_blank" rel="noreferrer">Download CV</a>
+            <a href={cvPdfUrl} className="btn btn-ghost" download="Hameez-Naz-CV.pdf">
+              Download CV
+            </a>
           </div>
           <div className="hero-stats">
             {[['5+', 'Techniques'], ['2+', 'Years Study'], ['12+', 'Projects'], ['∞', 'Creativity']].map(([num, label]) => (
@@ -497,17 +585,12 @@ function App() {
               <div className="section-label">Portfolio</div>
               <h2 className="section-title dark">Design Gallery</h2>
             </div>
-            <p className="gallery-hint">Click any project to view all 4 images in the lightbox.</p>
+            
           </div>
           <div className="gallery-grid reveal" ref={addReveal}>
             {projects.map((project, i) => (
               <article key={project.title} className="gallery-card" onClick={() => openLightbox(i)}>
-                <div className="gallery-thumb" style={{ background: `linear-gradient(135deg, ${project.colors[0]}, ${project.colors[1]})` }}>
-                  <div className="gallery-emoji">{project.emoji}</div>
-                  <div className="gallery-overlay">
-                    <span>Click to view all images →</span>
-                  </div>
-                </div>
+                <GalleryThumb project={project} />
                 <div className="gallery-info">
                   <p className="gallery-type">{project.type}</p>
                   <h3 className="gallery-title">{project.title}</h3>
@@ -531,7 +614,7 @@ function App() {
             <h2 className="contact-title">Let&apos;s Work Together</h2>
             <p className="contact-sub">
               Contact me at{' '}
-              <a href="mailto:tahaarshad311@gmail.com" className="contact-email">tahaarshad311@gmail.com</a>
+              <a href="mailto:hareemnaz24@gmail.com" className="contact-email">hareemnaz24@gmail.com</a>
               {' '}or use the form below.
             </p>
             <form className="contact-form" onSubmit={handleSubmit}>
@@ -575,7 +658,8 @@ function App() {
       {/* ── FOOTER ──────────────────────────────────────── */}
       <footer className="footer">
         <span>Designed with <span className="footer-heart">♥</span> by{' '}
-        <span className="footer-brand">Hareem Studio</span> · Karachi, Pakistan</span>
+        <span className="footer-brand">© 2026 Hareem Naz. All rights reserved.</span>
+        </span>
       </footer>
 
       {/* ── LIGHTBOX ────────────────────────────────────── */}
@@ -588,23 +672,61 @@ function App() {
             <button className="lb-close" onClick={closeLightbox} aria-label="Close">✕</button>
             <div
               className="lb-main"
-              style={{
-                background: `linear-gradient(135deg, ${activeProject.colors[lightbox.thumbIdx]}, ${activeProject.colors[(lightbox.thumbIdx + 1) % activeProject.colors.length]})`,
-              }}
+              style={
+                lbMainImgFailed || !hasLbImages
+                  ? {
+                      background: `linear-gradient(135deg, ${activeProject.colors[lightbox.thumbIdx]}, ${activeProject.colors[(lightbox.thumbIdx + 1) % activeProject.colors.length]})`,
+                    }
+                  : { background: '#1a0a12' }
+              }
             >
-              <span className="lb-main-emoji">{activeProject.thumbEmojis[lightbox.thumbIdx]}</span>
+              {!lbMainImgFailed && hasLbImages && lbSlides[lightbox.thumbIdx] ? (
+                <img
+                  key={`${lightbox.projectIdx}-${lightbox.thumbIdx}`}
+                  src={lbSlides[lightbox.thumbIdx]}
+                  alt=""
+                  className="lb-main-img"
+                  onError={() => setLbMainImgFailed(true)}
+                />
+              ) : (
+                <span className="lb-main-emoji">{activeProject.thumbEmojis[lightbox.thumbIdx]}</span>
+              )}
             </div>
             <div className="lb-thumbs">
-              {activeProject.thumbEmojis.map((em, i) => (
-                <div
-                  key={i}
-                  className={`lb-thumb ${i === lightbox.thumbIdx ? 'active' : ''}`}
-                  style={{ background: `linear-gradient(135deg, ${activeProject.colors[i]}, ${activeProject.colors[(i + 1) % activeProject.colors.length]})` }}
-                  onClick={() => setThumb(i)}
-                >
-                  <span>{em}</span>
-                </div>
-              ))}
+              {hasLbImages
+                ? lbSlides.map((src, i) => (
+                    <button
+                      type="button"
+                      key={i}
+                      className={`lb-thumb ${i === lightbox.thumbIdx ? 'active' : ''}`}
+                      onClick={() => setThumb(i)}
+                      aria-label={`Image ${i + 1}`}
+                    >
+                      <span className="lb-thumb-emoji" aria-hidden>{activeProject.thumbEmojis[i]}</span>
+                      <img
+                        src={src}
+                        alt=""
+                        className="lb-thumb-img"
+                        onError={(e) => {
+                          e.currentTarget.classList.add('lb-thumb-img--hide')
+                        }}
+                      />
+                    </button>
+                  ))
+                : activeProject.thumbEmojis.map((em, i) => (
+                    <button
+                      type="button"
+                      key={i}
+                      className={`lb-thumb ${i === lightbox.thumbIdx ? 'active' : ''}`}
+                      style={{
+                        background: `linear-gradient(135deg, ${activeProject.colors[i]}, ${activeProject.colors[(i + 1) % activeProject.colors.length]})`,
+                      }}
+                      onClick={() => setThumb(i)}
+                      aria-label={`Slide ${i + 1}`}
+                    >
+                      <span>{em}</span>
+                    </button>
+                  ))}
             </div>
             <div className="lb-body">
               <p className="lb-type">{activeProject.type}</p>
