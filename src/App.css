@@ -3,17 +3,18 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --rose:    #c2185b;
-  --rose2:   #e91e8c;
-  --gold:    #f59e0b;
-  --gold2:   #fbbf24;
-  --teal:    #0d9488;
-  --teal2:   #14b8a6;
-  --cream:   #fdf8f3;
-  --dark:    #2a0a1e;
-  --dark2:   #3d0f2b;
-  --text:    #2d1b4e;
-  --muted:   #6b5b8a;
+  --rose:    #6f1f3b;
+  --rose2:   #e2a6ba;
+  /* User-provided #b6a7c is normalized to valid hex (#b6a7cc). */
+  --gold:    #b6a7cc;
+  --gold2:   #fff0f5;
+  --teal:    #38071f;
+  --teal2:   #6f1f3b;
+  --cream:   #fff0f5;
+  --dark:    #38071f;
+  --dark2:   #6f1f3b;
+  --text:    #38071f;
+  --muted:   #6f1f3b;
   --display: 'Playfair Display', Georgia, serif;
   --body:    'DM Sans', system-ui, sans-serif;
 }
@@ -156,7 +157,10 @@ body {
   position: relative;
   overflow: hidden;
   padding: 95px 24px 30px;
-  background: radial-gradient(ellipse at 80% 0%, rgb(221 15 96 / 16%) 0%, rgba(194, 24, 91, 0.07) 50%), radial-gradient(ellipse at 10% 80%, rgba(13, 148, 136, 0.09) 0%, transparent 45%), linear-gradient(160deg, #fdf0f7 0%, #e3bad3 45%, #f5f0ff 100%);
+  background:
+    radial-gradient(ellipse at 82% 0%, color-mix(in srgb, var(--rose) 26%, transparent) 0%, transparent 55%),
+    radial-gradient(ellipse at 12% 82%, color-mix(in srgb, var(--gold) 32%, transparent) 0%, transparent 52%),
+    linear-gradient(160deg, var(--gold2) 0%, color-mix(in srgb, var(--rose2) 52%, white) 50%, color-mix(in srgb, var(--gold) 55%, white) 100%);
 }
 
 .hero::before {
@@ -243,7 +247,7 @@ body {
 
 .hero-gradient {
   display: block;
-  background: linear-gradient(120deg, var(--rose), var(--rose2), var(--gold));
+  background: linear-gradient(120deg, var(--rose), #b62253, var(--gold));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -379,7 +383,10 @@ body {
 
 /* ─── ABOUT ─────────────────────────────────────────── */
 #about {
-  background: radial-gradient(ellipse at 95% 10%, rgba(194, 24, 91, 0.08) 0%, #ffb3d1 55%), radial-gradient(ellipse at 5% 90%, rgba(245, 158, 11, 0.06) 0%, transparent 45%), #ffffff;
+  background:
+    radial-gradient(ellipse at 95% 10%, color-mix(in srgb, var(--rose2) 56%, white) 0%, transparent 58%),
+    radial-gradient(ellipse at 5% 90%, color-mix(in srgb, var(--gold) 40%, transparent) 0%, transparent 48%),
+    color-mix(in srgb, var(--gold2) 88%, white);
   width: 100%;
   max-width: 100%;
   padding: 96px 24px;
@@ -441,14 +448,14 @@ body {
 
 .stack-back1 {
   left: 0; top: 20px;
-  background: linear-gradient(135deg, #f3e8ff, #fce7f3);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--gold) 38%, white), color-mix(in srgb, var(--rose2) 46%, white));
   border: 1px solid rgba(194,24,91,0.15);
   transform: rotate(-6deg);
 }
 
 .stack-back2 {
   left: 20px; top: 10px;
-  background: linear-gradient(135deg, #fef3c7, #fde8d8);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--gold2) 86%, white), color-mix(in srgb, var(--rose2) 36%, white));
   border: 1px solid rgba(245,158,11,0.2);
   transform: rotate(-2deg);
 }
@@ -523,9 +530,9 @@ body {
 /* ─── SKILLS ────────────────────────────────────────── */
 .skills-section {
   background:
-    radial-gradient(ellipse at 0% 50%, rgba(194,24,91,0.28) 0%, transparent 50%),
-    radial-gradient(ellipse at 100% 50%, rgba(13,148,136,0.16) 0%, transparent 50%),
-    linear-gradient(135deg, #2a0a1e 0%, #3d0f2b 50%, #1a0a2e 100%);
+    radial-gradient(ellipse at 0% 50%, color-mix(in srgb, var(--rose2) 30%, transparent) 0%, transparent 52%),
+    radial-gradient(ellipse at 100% 50%, color-mix(in srgb, var(--gold) 24%, transparent) 0%, transparent 52%),
+    linear-gradient(135deg, var(--teal) 0%, var(--rose) 52%, var(--dark2) 100%);
   width: 100%;
   padding: 96px 24px;
   position: relative;
@@ -627,9 +634,9 @@ body {
 /* ─── EXPERIENCE ────────────────────────────────────── */
 #experience {
   background:
-    radial-gradient(ellipse at 90% 20%, rgba(245,158,11,0.07) 0%, transparent 50%),
-    radial-gradient(ellipse at 10% 80%, rgba(194,24,91,0.07) 0%, transparent 45%),
-    #fdf8f3;
+    radial-gradient(ellipse at 90% 20%, color-mix(in srgb, var(--gold) 35%, transparent) 0%, transparent 52%),
+    radial-gradient(ellipse at 10% 80%, color-mix(in srgb, var(--rose2) 30%, transparent) 0%, transparent 50%),
+    var(--gold2);
   width: 100%;
   max-width: 100%;
   padding: 96px 24px;
@@ -672,7 +679,7 @@ body {
   width: 14px; height: 14px;
   border-radius: 50%;
   background: var(--rose);
-  border: 3px solid #fdf8f3;
+  border: 3px solid var(--gold2);
   box-shadow: 0 0 0 3px rgba(194,24,91,0.2);
 }
 
@@ -724,7 +731,10 @@ body {
 
 /* ─── GALLERY ────────────────────────────────────────── */
 .gallery-section {
-  background: radial-gradient(ellipse at 5% 10%, rgba(194, 24, 91, 0.1) 0%, transparent 45%), radial-gradient(ellipse at 95% 90%, rgba(13, 148, 136, 0.08) 0%, #ffbfe2 45%), #fef5fa;
+  background:
+    radial-gradient(ellipse at 5% 10%, color-mix(in srgb, var(--rose2) 38%, transparent) 0%, transparent 48%),
+    radial-gradient(ellipse at 95% 90%, color-mix(in srgb, var(--gold) 36%, transparent) 0%, color-mix(in srgb, var(--rose2) 22%, white) 46%),
+    color-mix(in srgb, var(--gold2) 92%, white);
   width: 100%;
   padding: 96px 24px;
   position: relative;
@@ -844,9 +854,9 @@ body {
 /* ─── CONTACT ────────────────────────────────────────── */
 #contact {
   background:
-    radial-gradient(ellipse at 80% 20%, rgba(194,24,91,0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 20% 80%, rgba(245,158,11,0.06) 0%, transparent 45%),
-    #fdf8f3;
+    radial-gradient(ellipse at 80% 20%, color-mix(in srgb, var(--rose2) 32%, transparent) 0%, transparent 52%),
+    radial-gradient(ellipse at 20% 80%, color-mix(in srgb, var(--gold) 34%, transparent) 0%, transparent 48%),
+    var(--gold2);
   width: 100%;
   max-width: 100%;
   padding: 35px 24px;
@@ -881,7 +891,7 @@ body {
 
 .contact-title {
   font-family: var(--display);
-  font-size: 2rem;
+  font-size: 30px;
   color: var(--dark);
   margin-bottom: 12px;
   margin-top: 8px;
@@ -945,7 +955,7 @@ body {
 .footer {
   text-align: center;
   padding: 32px 24px;
-  background: linear-gradient(135deg, #2a0a1e, #1a0a2e);
+  background: linear-gradient(135deg, var(--teal), var(--dark2));
   color: rgba(255,255,255,0.4);
   font-size: 0.85rem;
   position: relative;
@@ -969,7 +979,7 @@ body {
   position: fixed;
   inset: 0;
   z-index: 999;
-  background: rgba(42,10,30,0.92);
+  background: color-mix(in srgb, var(--teal) 92%, black);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1056,7 +1066,7 @@ body {
   padding: 0;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #fdf2f8, #e0f2fe);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--gold2) 88%, white), color-mix(in srgb, var(--gold) 34%, white));
   font-family: inherit;
 }
 

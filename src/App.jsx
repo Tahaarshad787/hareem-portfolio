@@ -273,7 +273,7 @@ function App() {
       images: [shadowForms1, shadowForms2, shadowForms3, shadowForms4],
     },
     {
-      title: ' Tie-Dye Resist Patterns – Square Fold & Sunburst Techniques',
+      title: ' Tie-Dye Resist Patterns Square Fold & Sunburst Techniques',
       type: ' Radiant',
       emoji: '🌿',
       colors: ['#f0fdf4', '#dcfce7', '#d1fae5', '#ecfdf5'],
@@ -437,7 +437,7 @@ function App() {
             with Passion &amp; Precision
           </h1>
           <p className="hero-sub">
-            Pakistan-based Textile Designer specializing in surface design, pattern creation, block printing, and fabric exploration. Blending traditional techniques with modern aesthetics.
+          Pakistan-based textile designer specializing in surface design, pattern development, block printing, and material exploration. Focused on integrating traditional craftsmanship with contemporary aesthetics to create refined and innovative textile outcomes.
           </p>
           <div className="hero-actions">
             <a href="#contact" className="btn btn-primary">Get in Touch ✦</a>
@@ -447,7 +447,7 @@ function App() {
             </a>
           </div>
           <div className="hero-stats">
-            {[['5+', 'Techniques'], ['2+', 'Years Study'], ['12+', 'Projects'], ['∞', 'Creativity']].map(([num, label]) => (
+            {[['10+', 'Techniques'], ['2+', 'Years Study'], ['12+', 'Projects'], ['∞', 'Creativity']].map(([num, label]) => (
               <div key={label} className="hero-stat">
                 <span className="stat-num">{num}</span>
                 <span className="stat-label">{label}</span>
@@ -484,7 +484,7 @@ function App() {
               <p>Hands-on experience in block printing, tie and dye, stencil printing, and designing home textiles such as bedding and table linen. I love experimenting with colors, textures, and patterns.</p>
               <p>Currently seeking opportunities to gain practical experience and contribute creatively within the textile industry.</p>
               <div className="about-stats">
-                {[['2024', 'Started', 'rose'], ['7+', 'Techniques', 'teal'], ['∞', 'Ideas', 'gold']].map(([n, l, c]) => (
+                {[['2024', 'Started', 'rose'], ['10+', 'Techniques', 'teal'], ['∞', 'Ideas', 'gold']].map(([n, l, c]) => (
                   <div key={l} className="about-stat">
                     <span className={`about-stat-num color-${c}`}>{n}</span>
                     <span className="about-stat-label">{l}</span>
@@ -555,7 +555,7 @@ function App() {
                   <h3>Textile Design Student</h3>
                   <span className="exp-year">2024 – Present</span>
                 </div>
-                <p className="exp-org">University Program &amp; Studio Practice</p>
+                <p className="exp-org">Karachi School of Arts</p>
                 <ul className="exp-list">
                   <li>Designed and developed home textile products including bedding and table linen based on various themes.</li>
                   <li>Practiced multiple surface design techniques such as block printing, tie and dye, and stencil printing.</li>
