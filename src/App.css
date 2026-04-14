@@ -238,7 +238,7 @@ body {
 
 .hero-h1 {
   font-family: var(--display);
-  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-size: clamp(2.8rem, 7vw, 5rem);
   line-height: 1.05;
   color: var(--dark);
   font-weight: 900;
@@ -1156,7 +1156,10 @@ body {
 }
 
 .lb-title { font-family: var(--display); font-size: 1.8rem; color: var(--dark); margin-bottom: 10px; }
-.lb-desc { color: var(--muted); line-height: 1.7; margin-bottom: 16px; }
+.lb-desc { color: var(--muted); line-height: 26px; margin-bottom: 16px; }
+.lb-desc-row { display: block; }
+.lb-desc-row + .lb-desc-row { margin-top: 12px; }
+.lb-desc-label { color: var(--dark); font-weight: 700; }
 .lb-tools { display: flex; flex-wrap: wrap; gap: 8px; }
 
 .lb-tool {

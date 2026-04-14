@@ -210,8 +210,8 @@ function App() {
       type: 'Print Design',
       emoji: '🌸',
       colors: ['#fce7f3', '#f3e8ff', '#fef3c7', '#e8f5e9'],
-      desc: 'This bedding set is inspired by the rich visual language of traditional Chinese tapestry, reflecting elegance, symbolism, and rhythmic pattern composition. The set includes a duvet cover, flat bedsheet, fitted bedsheet, pillows, and back cushions, designed as a cohesive collection. The design features stylized floral motifs and flowing vine elements, influenced by traditional East Asian decorative patterns. These motifs are arranged with a sense of balance and movement, echoing the ornamental qualities often found in Chinese textile art. The use of organic curves and delicate detailing enhances the overall sophistication of the design. A full drop repeat pattern is applied on the main bedsheet, ensuring seamless continuity and demonstrating an understanding of professional textile repeat systems. The placement of motifs across different components of the set is carefully considered to maintain visual harmony. The color palette draws inspiration from classic Chinese aesthetics, incorporating rich and warm tones that create a bold yet graceful appearance. The entire design is executed using poster paints, showcasing control over brushwork, color blending, and surface technique. This project highlights the integration of cultural inspiration with contemporary textile application, reflecting strong skills in motif development, repeat design, and product visualization.',
-      tools: ['Chinese tapestry inspired', 'Rhythm & balance', 'Poster paint', 'Motif development'],
+      desc: 'Concept: Inspired by traditional Chinese tapestry, this collection explores symbolic floral motifs and flowing vine patterns, focusing on rhythm, balance, and ornamental composition.\n\nDesign Approach: Motifs are stylized and arranged using organic curves to create movement and visual harmony across the bedding set. A full-drop repeat pattern is applied to ensure seamless continuity.\n\nApplication: The collection includes a duvet cover, bedsheets, pillows, and cushions, designed as a cohesive set with consistent motif placement.\n\nTechnique: Poster paint, hand-rendered motifs, repeat pattern development.\n\nOutcome: A culturally inspired textile design that combines traditional aesthetics with contemporary product application.',
+      tools: ['Chinese tapestry inspired', 'Rhythm & balance', 'Poster paint', 'Motif development', 'Repeat Pattern'],
       thumbEmojis: ['🌸', '🌺', '🌼', '🌷'],
       cover: chineseCover,
       images: [bedding1, bedding2, bedding3, bedding4],
@@ -221,8 +221,8 @@ function App() {
       type: 'Booti Pattern',
       emoji: '💙',
       colors: ['#e0f2fe', '#dbeafe', '#e0e7ff', '#ede9fe'],
-      desc: 'This table linen set is inspired by the traditional Indian Booti motif, known for its delicate, repetitive floral elements and timeless appeal in textile design. The collection includes a tablecloth, table runner, placemat, napkin, and coaster, all designed to maintain a cohesive and balanced aesthetic.The design prominently features stylized booti motifs, combined with complementary floral elements, arranged in a structured yet visually pleasing composition. The motifs reflect traditional Indian textile ornamentation, characterized by symmetry, repetition, and fine detailing.A full drop repeat pattern is developed for the tablecloth, ensuring seamless continuity across the surface. The arrangement of motifs is carefully adapted for each product within the set—larger layouts for the tablecloth and runner, and more minimal, placement-based designs for napkins and coasters—creating both variety and harmony within the collection.The color palette is soft yet elegant, enhancing the traditional essence while giving the design a contemporary touch. The entire set is executed using poster paints, demonstrating precision in brushwork, clean edges, and effective color application.This project reflects a strong understanding of traditional motif adaptation, repeat pattern development, and product-based design, translating heritage inspiration into functional textile applications.',
-      tools: ['Booti pattern', 'Soft palette', 'Traditional aesthetic', 'Contemporary touch'],
+      desc: 'Concept: Inspired by traditional Indian booti motifs, this collection explores delicate floral elements through repetition, symmetry, and balanced composition.\n\nDesign Approach: Stylized booti motifs are arranged in structured layouts to create rhythm and visual harmony. A full-drop repeat pattern is developed for the tablecloth, while placement-based designs are adapted for smaller items.\n\nApplication: The collection includes a tablecloth, runner, placemats, napkins, and coasters, designed as a cohesive set with variation in scale and layout.\n\nTechnique: Poster paint, hand-rendered motifs, repeat pattern development.\n\nOutcome: A functional table linen collection that translates traditional Indian textile aesthetics into a contemporary context.',
+      tools: ['Indian Booti Inspired', 'Repeat Pattern', 'Soft Color Palette', 'Traditional Motifs','Product Design'],
       thumbEmojis: ['💙', '🌊', '✨', '🦋'],
       cover: booti,
       images: [booti1, booti2, booti3, booti4],
@@ -232,8 +232,8 @@ function App() {
       type: 'Oceanic',
       emoji: '🔷',
       colors: ['#fef3c7', '#ffedd5', '#fce7f3', '#f0fdf4'],
-      desc: 'This textile design is inspired by the beauty of underwater marine life, particularly sea shells and coral formations. The theme explores the organic shapes, textures, and calm rhythm of the ocean, translated into a decorative surface pattern.The composition features a variety of stylized shells, corals, and sea plants arranged over a deep ocean-blue background. Soft pastel tones such as blush pink, muted green, off-white, and accents of orange are used to create contrast while maintaining a soothing, aquatic color palette.The design is developed using a half drop repeat, where motifs are staggered vertically to create a more dynamic and flowing arrangement. This repeat style enhances visual movement, mimicking the natural drift and balance found in underwater environments.A cross stitch technique is incorporated as a central element, adding texture and a handcrafted feel to the design. The stitched section introduces a pixel-like structure that contrasts with the smooth printed motifs, creating an interesting fusion of traditional embroidery and surface design.Overall, the design aims to capture the serenity and richness of marine life while experimenting with repeat patterns and mixed textile techniques.',
-      tools: ['Ocean rhythm', 'Cross stitch', 'Handcrafted feel', 'Ocean palette'],
+      desc: 'Concept: Inspired by marine life, this design explores sea shells, corals, and underwater textures through a calm and rhythmic composition.\n\nDesign Approach: Motifs are arranged in a half-drop repeat to create a natural sense of movement, reflecting the flow of the ocean.\n\nTechnique: A combination of surface pattern design and cross stitch is used to introduce texture and a handcrafted quality, creating contrast between structured stitching and organic forms.\n\nColor Palette: Ocean blue base with soft pastel tones including blush pink, muted green, and off-white.\n\nOutcome: A textile design that captures the serenity of marine life while experimenting with repeat structures and mixed techniques.',
+      tools: ['Marine Inspired','Half Drop Repeat', 'Cross stitch', 'Ocean Color Palette', 'Mixed Techniques'],
       thumbEmojis: ['🔷', '⬡', '◈', '▲'],
       cover: seaShells,
       images: [seaShells1, seaShells2, seaShells3, seaShells4],
@@ -243,8 +243,8 @@ function App() {
       type: 'Luminous',
       emoji: '🌹',
       colors: ['#fce7f3', '#fbcfe8', '#f9a8d4', '#fdf2f8'],
-      desc: 'This textile design explores the theme of shadow, focusing on the interplay between organic forms and structured backgrounds. The composition features stylized botanical silhouettes that resemble shadow-like shapes, creating a sense of depth and layering.The background is developed using horizontal stripes in varying tones of blue and white, representing rhythm and continuity. These stripes contrast with the soft, flowing plant motifs, enhancing the visual impact of the “shadow” effect. The muted color palette—featuring dusty pinks, sage green, and deep teal—adds a calm yet sophisticated feel to the design.The pattern is arranged in a half drop repeat, where motifs are staggered vertically. This arrangement breaks monotony and introduces movement, allowing the design to appear more natural and dynamic across the surface.Overall, the design combines the concept of shadow with linear elements, creating a balanced composition that merges softness with structure. The use of contrast between stripes and organic shapes highlights depth, rhythm, and visual harmony.',
-      tools: ['Layered composition', 'Muted palette', 'Color harmony', 'Surface layering'],
+      desc: 'Concept: This design explores the contrast between shadow-like botanical forms and structured striped backgrounds, creating depth and layering.\n\nDesign Approach: Organic plant silhouettes are placed over horizontal stripes to highlight the interplay between softness and structure.\n\nPattern Development: A half-drop repeat is used to introduce movement and avoid visual monotony across the surface.\n\nColor Palette: Muted tones of dusty pink, sage green, and deep teal combined with blue and white stripes for a calm yet balanced composition.\n\nOutcome: A textile design that merges organic and linear elements, emphasizing rhythm, contrast, and visual harmony.',
+      tools: ['Shadow Concept', 'Half Drop Repeat', 'Muted palette', 'Organic vs Structured', 'Surface Pattern'],
       thumbEmojis: ['🌹', '✿', '❀', '🪷'],
       cover: shadowForms,
       images: [shadowForms1, shadowForms2, shadowForms3, shadowForms4],
@@ -254,8 +254,8 @@ function App() {
       type: ' Radiant',
       emoji: '🌿',
       colors: ['#f0fdf4', '#dcfce7', '#d1fae5', '#ecfdf5'],
-      desc: 'This textile exploration focuses on traditional tie-dye resist techniques, highlighting the controlled manipulation of fabric to create structured and organic patterns.The first cushion is developed using the square fold technique, where the fabric is systematically folded and bound to produce a grid-like pattern. The resulting design features intersecting linear formations with soft, diffused edges, demonstrating precision combined with the fluidity of dye absorption.The second cushion utilizes the sunburst technique, achieved through point binding. This method creates radiating circular motifs that resemble bursts of light, adding a sense of movement and rhythm to the composition.A monochromatic indigo color palette is employed across both pieces, emphasizing tonal variation and enhancing the visual depth of the resist patterns. The contrast between the geometric order of the square fold and the organic dynamism of the sunburst creates a balanced and engaging textile study.Overall, this work reflects an exploration of traditional dyeing methods, showcasing the interplay between control and unpredictability while producing visually distinct yet harmonious surface designs.',
-      tools: ['Monochromatic', 'Textile experiment', 'Dyeing process', 'Cushion design'],
+      desc: 'Concept: This project explores traditional tie-dye techniques through the contrast of structured and organic resist patterns.\n\nDesign Approach: The square fold technique creates geometric, grid-like formations, while the sunburst technique produces radiating circular motifs, adding movement and variation.\n\nTechnique: Tie-dye resist (square fold and sunburst), hand-dyed fabric.\n\nColor Palette: Monochromatic indigo tones, highlighting depth and tonal variation.\n\nApplication: Developed as cushion designs, showcasing both techniques within a cohesive textile study.\n\nOutcome: A study of resist dyeing that balances control and unpredictability, creating visually distinct yet harmonious patterns.',
+      tools: ['Tie-Dye Resist', 'Square Fold', 'Sunburst Technique', 'Indigo Color Palette', 'Textile Experiment'],
       thumbEmojis: ['🌿', '🦜', '🌻', '🍃'],
       cover: radiant,
       images: [radiant1, radiant2, radiant3, radiant4],
@@ -265,8 +265,8 @@ function App() {
       type: 'Fluidity',
       emoji: '🧵',
       colors: ['#fef3c7', '#fce7f3', '#e0f2fe', '#f0fdf4'],
-      desc: 'This assignment explores the artistic technique of marbling, where oil paint and water interact to create flowing, organic patterns. Because oil and water naturally repel each other, the paint floats and spreads unpredictably across the surface, forming unique swirls, veins, and textures.In the image, six small compositions are mounted on a warm-toned background, each showcasing a different color combination and pattern. Some pieces emphasize bold contrast—like black and white with hints of orange—while others use softer palettes such as pastel blues, pinks, and greens. The designs range from tightly swirled, high-energy movement to more subtle, airy blends with scattered droplets.',
-      tools: ['Oil paint', 'Water interaction', 'Fluid art', 'Floating paint'],
+      desc: 'Concept: This project explores marbling as a technique to create fluid, organic surface patterns through the interaction of paint on water.\n\nDesign Approach: Multiple compositions are developed to experiment with movement, texture, and color variation, resulting in unique swirling and layered patterns.\n\nColor Exploration: A range of palettes is used, from bold contrasts like black and white with orange accents to softer pastel tones including blue, pink, and green.\n\nTechnique: Marbling using oil paint on water.\n\nOutcome: A series of experimental textile surfaces showcasing fluid pattern formation, color variation, and expressive mark-making.',
+      tools: ['Marbling Technique', 'Fluid Patterns', 'Color Exploration', 'Surface Experiment', 'Organic Forms'],
       thumbEmojis: ['🧵', '✂️', '🎨', '✨'],
       cover: fluidity,
       images: [fluidity1, fluidity2, fluidity3, fluidity4],
@@ -278,17 +278,15 @@ function App() {
       icon: '🎨',
       title: 'Core Design Skills',
       tags: [
-        'Textile Pattern Design',
-        'Surface Pattern Development',
-        'Motif Creation & Placement',
-        'Repeat Pattern Construction',
-        'Color Theory & Palette Development',
-        'Concept & Theme Design',
+        'Surface Pattern Design',
+        'Repeat Pattern Development',
+        'Motif Design & Placement',
+        'Color Palette Development',
       ],
     },
     {
       icon: '💻',
-      title: 'Digital Skills',
+      title: 'Digital Tools',
       tags: [
         'Adobe Photoshop',
         'Adobe Illustrator',
@@ -304,9 +302,8 @@ function App() {
         'Tie & Dye Techniques',
         'Stencil Printing',
         'Fabric Painting',
-        'Cross Stitch Embroidery',
-        'Appliqué (Ralli Work)',
-        'Hand & Basic Loom Weaving',
+        'Basic Weaving',
+        'Embroidery',
       ],
     },
     {
@@ -318,7 +315,6 @@ function App() {
         'Composition & Layout',
         'Texture Development',
         'Mixed Media Exploration',
-        'Background & Surface Development',
       ],
     },
   ]
@@ -383,6 +379,24 @@ function App() {
   const lbSlides = activeProject.images?.length ? activeProject.images : null
   const hasLbImages = Boolean(lbSlides?.length)
   const navItems = ['Home', 'About', 'Skills', 'Experience', 'Gallery', 'Contact']
+  const renderProjectDesc = (text) => {
+    const highlightedLabels = new Set(['Concept', 'Design Approach', 'Application', 'Technique', 'Outcome'])
+    return text.split('\n\n').map((block, i) => {
+      const colonIdx = block.indexOf(':')
+      if (colonIdx > 0) {
+        const label = block.slice(0, colonIdx).trim()
+        if (highlightedLabels.has(label)) {
+          const content = block.slice(colonIdx + 1).trim()
+          return (
+            <span key={`${label}-${i}`} className="lb-desc-row">
+              <span className="lb-desc-label">{label}:</span> {content}
+            </span>
+          )
+        }
+      }
+      return <span key={`row-${i}`} className="lb-desc-row">{block}</span>
+    })
+  }
 
   return (
     <div className="portfolio">
@@ -437,10 +451,10 @@ function App() {
           <h1 className="hero-h1">
              Hi, I'm Hareem 
             <span className="hero-gradient">A Textile Designer</span>
-            with Passion &amp; Precision
+            Exploring Patterns, Textures &amp; Color
           </h1>
           <p className="hero-sub">
-          I create visually compelling textile designs that blend creativity, culture, and modern aesthetics. My work focuses on surface patterns, fabric prints, and concept-driven designs that transform ideas into meaningful visual experiences.
+          I create textile designs that combine traditional techniques like block printing and tie-dye with modern digital processes, focusing on surface patterns and fabric prints that are both visually engaging and production-ready.
           </p>
           <div className="hero-actions">
             <a href="#contact" className="btn btn-primary">Get in Touch ✦</a>
@@ -494,8 +508,8 @@ function App() {
             </div>
             <div className="about-text">
               <div className="section-label">About Me</div>
-              <p>I am a passionate Textile Designer with a strong eye for detail and a deep interest in pattern development, color harmony, and fabric storytelling.</p>
-              <p>My work is inspired by nature, contemporary trends, and cultural elements, allowing me to create designs that are both artistic and commercially relevant.</p>
+              <p>I am a textile design student specializing in surface pattern design, fabric prints, and color development. My work combines traditional techniques like block printing and tie-dye with digital tools to create thoughtful and production-ready textile designs.Inspired by nature and cultural elements, I focus on developing patterns that are both visually engaging and commercially relevant.</p>
+              <p>My work is inspired by nature, contemporary trends, and cultural elements, I focus on developing patterns that are both visually engaging and commercially relevant.</p>
               <p><strong>I specialize in:</strong></p>
               <ul className="about-specialties">
                 <li>Surface Pattern Design</li>
@@ -526,7 +540,7 @@ function App() {
           <div className="reveal" ref={addReveal}>
             <div className="section-label light">Expertise</div>
             <h2 className="section-title light">SKILLS &amp; EXPERTISE</h2>
-            <p className="section-sub light">I combine creativity with technical precision to create textile designs that are both visually engaging and production ready. My skill set reflects a balance of traditional techniques and modern digital design.</p>
+            <p className="section-sub light">I combine traditional textile techniques with digital tools to create surface patterns and fabric designs that are both visually engaging and production ready.</p>
           </div>
           <div className="skills-grid reveal" ref={addReveal}>
             {skillGroups.map((group) => (
@@ -564,7 +578,7 @@ function App() {
           <div className="reveal" ref={addReveal}>
             <div className="section-label">Journey</div>
             <h2 className="section-title dark">My Experience</h2>
-            <p className="section-sub muted">A creative and academic journey in textile design, focused on developing innovative surface designs and exploring diverse fabric techniques from 2024 to present.</p>
+            <p className="section-sub muted">Developing practical skills in textile design through hands-on projects, focusing on surface patterns, fabric techniques, and design applications.</p>
           </div>
           <div className="timeline reveal" ref={addReveal}>
             <div className="timeline-line" />
@@ -577,10 +591,11 @@ function App() {
                 </div>
                 <p className="exp-org">Karachi School of Arts</p>
                 <ul className="exp-list">
-                  <li>Designed and developed a range of home textile products, including bedding and table linen, inspired by diverse themes and concepts.</li>
-                  <li>Explored and applied various surface design techniques such as block printing, tie-dye, and stencil printing to create unique fabric outcomes.</li>
-                  <li>Experimented with color palettes, textures, and pattern development to enhance visual aesthetics and functionality in textile design.                  </li>
-                  <li>Created original design concepts by combining traditional craftsmanship with contemporary design approaches.</li>
+                  <li>Developed textile designs for home products including bedding and table linen.</li>
+                  <li>Created surface patterns using block printing, tie-dye, and stencil techniques.</li>
+                  <li>Designed repeat patterns and motifs through both hand and digital processes.</li>
+                  <li>Explored color palettes and textures to enhance visual appeal and functionality.</li>
+                  <li>Combined traditional craftsmanship with contemporary design approaches.</li>
                 </ul>
                 <div className="exp-chips">
                   {['Block Printing', 'Tie & Dye', 'Stencil Printing', 'Pattern Development', 'Home Textiles', 'Color Exploration'].map((c) => (
@@ -751,7 +766,7 @@ function App() {
             <div className="lb-body">
               <p className="lb-type">{activeProject.type}</p>
               <h3 className="lb-title">{activeProject.title}</h3>
-              <p className="lb-desc">{activeProject.desc}</p>
+              <p className="lb-desc">{renderProjectDesc(activeProject.desc)}</p>
               <div className="lb-tools">
                 {activeProject.tools.map((t) => (
                   <span key={t} className="lb-tool">{t}</span>
