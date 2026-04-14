@@ -380,7 +380,16 @@ function App() {
   const hasLbImages = Boolean(lbSlides?.length)
   const navItems = ['Home', 'About', 'Skills', 'Experience', 'Gallery', 'Contact']
   const renderProjectDesc = (text) => {
-    const highlightedLabels = new Set(['Concept', 'Design Approach', 'Application', 'Technique', 'Outcome'])
+    const highlightedLabels = new Set([
+      'Concept',
+      'Design Approach',
+      'Application',
+      'Technique',
+      'Pattern Development',
+      'Color Palette',
+      'Color Exploration',
+      'Outcome',
+    ])
     return text.split('\n\n').map((block, i) => {
       const colonIdx = block.indexOf(':')
       if (colonIdx > 0) {
