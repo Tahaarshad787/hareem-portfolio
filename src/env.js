@@ -14,6 +14,7 @@ export const env = createEnv({
     VITE_EMAILJS_TEMPLATE_ID: z.string().optional(),
     VITE_EMAILJS_PUBLIC_KEY: z.string().optional(),
     VITE_RECEIVER_EMAIL: z.string().optional(),
+    VITE_LINKEDIN_URL: z.string().url().optional(),
   },
   runtimeEnv: import.meta.env,
   emptyStringAsUndefined: true,

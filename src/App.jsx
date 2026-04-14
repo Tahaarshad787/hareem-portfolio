@@ -37,6 +37,20 @@ import fluidity3 from '../src/assets/gallery/marbling/fluidity3.png'
 import fluidity4 from '../src/assets/gallery/marbling/fluidity4.png'
 import cvPdfUrl from './assets/Hameez Naz.pdf?url'
 
+const IconDownload = ({ className = '' }) => (
+  <svg className={className} viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M12 4v11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    <path d="m8 12 4 4 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M5 20h14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+  </svg>
+)
+
+const IconLinkedIn = ({ className = '' }) => (
+  <svg className={className} viewBox="0 0 24 24" width="18" height="18" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+  </svg>
+)
+
 /* ── Textile SVG decoration components ─────────────── */
 
 // Hexagon / ikat weave pattern
@@ -144,43 +158,6 @@ const DecoSpool = ({ className }) => (
     {[60,70,80,90,100,110,120].map(y => (
       <ellipse key={y} cx="90" cy={y} rx="35" ry="5" stroke="currentColor" strokeWidth="0.8"/>
     ))}
-  </svg>
-)
-
-// Emoji-style yarn ball (chunky fills + black outline like 🎨 ✏️ 💻 on system emoji font)
-const ink = '#18181b'
-const IconTextileTechniques = () => (
-  <svg
-    className="skill-card-icon-svg skill-card-icon-svg--emoji"
-    viewBox="0 0 64 64"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    aria-hidden="true"
-  >
-    <path
-      d="M6 22c5-10 18-12 26-4 4 4 5 11 2 17-4 9-3 16 4 18 5 2 12-2 14-9"
-      fill="#fde047"
-      stroke={ink}
-      strokeWidth="2.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <ellipse cx="36" cy="40" rx="21" ry="19" fill="#f472b6" stroke={ink} strokeWidth="2.6" />
-    <path
-      d="M22 34q14 6 28 2M20 42q16 7 32 2M24 50q10 3 20 1"
-      stroke={ink}
-      strokeWidth="2.15"
-      strokeLinecap="round"
-    />
-    <ellipse cx="28" cy="32" rx="7" ry="5" fill="#fda4af" stroke={ink} strokeWidth="2" transform="rotate(-28 28 32)" />
-    <path
-      d="M46 14q8 6 10 16"
-      fill="none"
-      stroke="#14b8a6"
-      strokeWidth="3"
-      strokeLinecap="round"
-    />
-    <circle cx="54" cy="12" r="4.5" fill="#5eead4" stroke={ink} strokeWidth="2.2" />
   </svg>
 )
 
@@ -299,24 +276,50 @@ function App() {
   const skillGroups = [
     {
       icon: '🎨',
-      title: 'Creative Skills',
-      tags: ['Textile Pattern Design', 'Color Theory', 'Surface Design', 'Motif Creation', 'Repeat Patterns', 'Theme Design'],
-    },
-    {
-      icon: <IconTextileTechniques />,
-      title: 'Textile Techniques',
-      tags: ['Block Printing', 'Tie & Dye', 'Stencil Printing', 'Fabric Painting', 'Cross Stitch', 'Applique (Ralli)', 'Basic Weaving'],
-    },
-    {
-      icon: '✏️',
-      title: 'Art & Design',
-      tags: ['Sketching', 'Illustration', 'Composition Layout', 'Texture Creation', 'Mixed Media', 'Background Development'],
+      title: 'Core Design Skills',
+      tags: [
+        'Textile Pattern Design',
+        'Surface Pattern Development',
+        'Motif Creation & Placement',
+        'Repeat Pattern Construction',
+        'Color Theory & Palette Development',
+        'Concept & Theme Design',
+      ],
     },
     {
       icon: '💻',
-      title: 'Digital Tools',
-      tags: ['Adobe Photoshop', 'Adobe Illustrator'],
-      extra: ['Creativity', 'Detail Oriented', 'Innovation', 'Time Management'],
+      title: 'Digital Skills',
+      tags: [
+        'Adobe Photoshop',
+        'Adobe Illustrator',
+        'Digital Pattern Development',
+        'Print Layout Preparation',
+      ],
+    },
+    {
+      icon: '🧵',
+      title: 'Textile Techniques',
+      tags: [
+        'Block Printing',
+        'Tie & Dye Techniques',
+        'Stencil Printing',
+        'Fabric Painting',
+        'Cross Stitch Embroidery',
+        'Appliqué (Ralli Work)',
+        'Hand & Basic Loom Weaving',
+      ],
+    },
+    {
+      icon: '✏️',
+      title: 'Art & Design Foundation',
+      tags: [
+        'Sketching & Concept Drawing',
+        'Illustration',
+        'Composition & Layout',
+        'Texture Development',
+        'Mixed Media Exploration',
+        'Background & Surface Development',
+      ],
     },
   ]
 
@@ -432,19 +435,31 @@ function App() {
             Available for work
           </div>
           <h1 className="hero-h1">
-            Crafting Beautiful
-            <span className="hero-gradient">Textile Designs</span>
+             Hi, I'm Hareem 
+            <span className="hero-gradient">A Textile Designer</span>
             with Passion &amp; Precision
           </h1>
           <p className="hero-sub">
-          Pakistan-based textile designer specializing in surface design, pattern development, block printing, and material exploration. Focused on integrating traditional craftsmanship with contemporary aesthetics to create refined and innovative textile outcomes.
+          I create visually compelling textile designs that blend creativity, culture, and modern aesthetics. My work focuses on surface patterns, fabric prints, and concept-driven designs that transform ideas into meaningful visual experiences.
           </p>
           <div className="hero-actions">
             <a href="#contact" className="btn btn-primary">Get in Touch ✦</a>
-            <a href="#gallery" className="btn btn-outline">View Gallery →</a>
-            <a href={cvPdfUrl} className="btn btn-ghost" download="Hameez-Naz-CV.pdf">
-              Download CV
+            <a href="#gallery" className="btn btn-outline">View My Work  →</a>
+            <a href={cvPdfUrl} className="btn btn-download" download="Hameez-Naz-CV.pdf">
+              <IconDownload className="btn-icon" />
+              <span>Download CV</span>
             </a>
+            {env.VITE_LINKEDIN_URL ? (
+              <a
+                href={env.VITE_LINKEDIN_URL}
+                className="btn btn-linkedin"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconLinkedIn className="btn-icon" />
+                <span>LinkedIn</span>
+              </a>
+            ) : null}
           </div>
           <div className="hero-stats">
             {[['10+', 'Techniques'], ['2+', 'Years Study'], ['12+', 'Projects'], ['∞', 'Creativity']].map(([num, label]) => (
@@ -479,10 +494,15 @@ function App() {
             </div>
             <div className="about-text">
               <div className="section-label">About Me</div>
-              <h2>Where Tradition Meets Modern Design</h2>
-              <p>I am a creative and passionate textile design student with a strong interest in surface design and fabric exploration. My work combines traditional techniques with contemporary aesthetics.</p>
-              <p>Hands-on experience in block printing, tie and dye, stencil printing, and designing home textiles such as bedding and table linen. I love experimenting with colors, textures, and patterns.</p>
-              <p>Currently seeking opportunities to gain practical experience and contribute creatively within the textile industry.</p>
+              <p>I am a passionate Textile Designer with a strong eye for detail and a deep interest in pattern development, color harmony, and fabric storytelling.</p>
+              <p>My work is inspired by nature, contemporary trends, and cultural elements, allowing me to create designs that are both artistic and commercially relevant.</p>
+              <p><strong>I specialize in:</strong></p>
+              <ul className="about-specialties">
+                <li>Surface Pattern Design</li>
+                <li>Fabric Print Development</li>
+                <li>Digital Textile Design</li>
+              </ul>
+              <p>My goal is to design textiles that not only look beautiful but also communicate a story and connect with people.</p>
               <div className="about-stats">
                 {[['2024', 'Started', 'rose'], ['10+', 'Techniques', 'teal'], ['∞', 'Ideas', 'gold']].map(([n, l, c]) => (
                   <div key={l} className="about-stat">
@@ -505,8 +525,8 @@ function App() {
         <div className="skills-inner">
           <div className="reveal" ref={addReveal}>
             <div className="section-label light">Expertise</div>
-            <h2 className="section-title light">Skills &amp; Techniques</h2>
-            <p className="section-sub light">A comprehensive set of creative and technical skills developed through academic and studio practice.</p>
+            <h2 className="section-title light">SKILLS &amp; EXPERTISE</h2>
+            <p className="section-sub light">I combine creativity with technical precision to create textile designs that are both visually engaging and production ready. My skill set reflects a balance of traditional techniques and modern digital design.</p>
           </div>
           <div className="skills-grid reveal" ref={addReveal}>
             {skillGroups.map((group) => (
@@ -544,7 +564,7 @@ function App() {
           <div className="reveal" ref={addReveal}>
             <div className="section-label">Journey</div>
             <h2 className="section-title dark">My Experience</h2>
-            <p className="section-sub muted">Academic and practical textile design journey from 2024 to present.</p>
+            <p className="section-sub muted">A creative and academic journey in textile design, focused on developing innovative surface designs and exploring diverse fabric techniques from 2024 to present.</p>
           </div>
           <div className="timeline reveal" ref={addReveal}>
             <div className="timeline-line" />
@@ -557,10 +577,10 @@ function App() {
                 </div>
                 <p className="exp-org">Karachi School of Arts</p>
                 <ul className="exp-list">
-                  <li>Designed and developed home textile products including bedding and table linen based on various themes.</li>
-                  <li>Practiced multiple surface design techniques such as block printing, tie and dye, and stencil printing.</li>
-                  <li>Explored color combinations, textures, and pattern development through academic projects.</li>
-                  <li>Created original design concepts using both traditional and modern approaches.</li>
+                  <li>Designed and developed a range of home textile products, including bedding and table linen, inspired by diverse themes and concepts.</li>
+                  <li>Explored and applied various surface design techniques such as block printing, tie-dye, and stencil printing to create unique fabric outcomes.</li>
+                  <li>Experimented with color palettes, textures, and pattern development to enhance visual aesthetics and functionality in textile design.                  </li>
+                  <li>Created original design concepts by combining traditional craftsmanship with contemporary design approaches.</li>
                 </ul>
                 <div className="exp-chips">
                   {['Block Printing', 'Tie & Dye', 'Stencil Printing', 'Pattern Development', 'Home Textiles', 'Color Exploration'].map((c) => (
@@ -611,7 +631,7 @@ function App() {
           <div className="contact-card reveal" ref={addReveal}>
             <div className="contact-icon">✉️</div>
             <div className="section-label" style={{ textAlign: 'center' }}>Get In Touch</div>
-            <h2 className="contact-title">Let&apos;s Work Together</h2>
+            <h2 className="contact-title">Let&apos;s collaborate and bring creative textile ideas to life.</h2>
             <p className="contact-sub">
               Contact me at{' '}
               <a href="mailto:hareemnaz24@gmail.com" className="contact-email">hareemnaz24@gmail.com</a>
