@@ -642,6 +642,14 @@ body {
 
 .skill-card-icon { font-size: 2rem; margin-bottom: 12px; line-height: 1; }
 
+.skill-card-icon-image {
+  width: 2.1rem;
+  height: 2.1rem;
+  object-fit: contain;
+  display: block;
+  border-radius: 6px;
+}
+
 .skill-card-icon-svg {
   width: 2.35rem;
   height: 2.35rem;
