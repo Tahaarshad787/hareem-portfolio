@@ -10,6 +10,7 @@ import bedding2 from '../src/assets/gallery/chinese-tapestry-bedding/bedding2.pn
 import bedding3 from '../src/assets/gallery/chinese-tapestry-bedding/bedding3.png'
 import bedding4 from '../src/assets/gallery/chinese-tapestry-bedding/bedding4.png'
 import logo from '../src/assets/logo.png'
+import logoo from '../src/assets/logoo.png'
 import booti from '../src/assets/gallery/booti-pattern/cover.png'
 import booti1 from '../src/assets/gallery/booti-pattern/booti1.png'
 import booti2 from '../src/assets/gallery/booti-pattern/booti2.png'
@@ -276,7 +277,7 @@ function App() {
   const skillGroups = [
     {
       icon: '🎨',
-      title: 'Core Design Skills',
+      title: 'Core Skills',
       tags: [
         'Surface Pattern Design',
         'Repeat Pattern Development',
@@ -295,7 +296,7 @@ function App() {
       ],
     },
     {
-      icon: '🧵',
+      icon: <img src={logoo} alt="" className="skill-card-icon-image" />,
       title: 'Textile Techniques',
       tags: [
         'Block Printing',
@@ -519,13 +520,9 @@ function App() {
               <div className="section-label">About Me</div>
               <p>I am a textile design student specializing in surface pattern design, fabric prints, and color development. My work combines traditional techniques like block printing and tie-dye with digital tools to create thoughtful and production-ready textile designs.Inspired by nature and cultural elements, I focus on developing patterns that are both visually engaging and commercially relevant.</p>
               <p>My work is inspired by nature, contemporary trends, and cultural elements, I focus on developing patterns that are both visually engaging and commercially relevant.</p>
-              <p><strong>I specialize in:</strong></p>
-              <ul className="about-specialties">
-                <li>Surface Pattern Design</li>
-                <li>Fabric Print Development</li>
-                <li>Digital Textile Design</li>
-              </ul>
-              <p>My goal is to design textiles that not only look beautiful but also communicate a story and connect with people.</p>
+            
+             
+             
               <div className="about-stats">
                 {[['2024', 'Started', 'rose'], ['10+', 'Techniques', 'teal'], ['∞', 'Ideas', 'gold']].map(([n, l, c]) => (
                   <div key={l} className="about-stat">
